@@ -1,73 +1,126 @@
-# Welcome to your Lovable project
 
-## Project info
+# 🖋️ LazyWrite - Beautiful Handwriting Generator
 
-**URL**: https://lovable.dev/projects/b762bad5-8743-45c4-9c91-589921676488
+Transform your typed text into realistic handwriting with LazyWrite. Choose from our collection of authentic handwriting fonts and export as high-quality images or PDFs.
 
-## How can I edit this code?
+## ✨ Features
 
-There are several ways of editing your application.
+- **5 Beautiful Handwriting Fonts**: From elegant script to casual handwriting
+- **Real-time Preview**: See your handwriting as you type
+- **High-Quality Export**: Download as PNG or PDF
+- **Responsive Design**: Works perfectly on desktop and mobile
+- **Monetization Ready**: Stripe integration for Pro subscriptions
 
-**Use Lovable**
+## 🚀 Tech Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/b762bad5-8743-45c4-9c91-589921676488) and start prompting.
+- **Frontend**: React + Vite + TypeScript
+- **UI**: TailwindCSS + shadcn/ui
+- **Rendering**: HTML5 Canvas
+- **Export**: Canvas API for image generation
+- **Payments**: Stripe (ready for integration)
+- **Deployment**: Vercel-ready
 
-Changes made via Lovable will be committed automatically to this repo.
+## 📦 Installation
 
-**Use your preferred IDE**
+1. Clone the repository
+```bash
+git clone <your-repo-url>
+cd lazywrite
+```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+2. Install dependencies
+```bash
+npm install
+```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. Start development server
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## 🎨 Available Fonts
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+1. **Elegant Script** - Flowing and sophisticated
+2. **Casual Handwriting** - Relaxed and natural  
+3. **Neat Print** - Clear and readable
+4. **Vintage Cursive** - Classic and timeless
+5. **Modern Script** - Contemporary and stylish
 
-**Use GitHub Codespaces**
+## 💳 Pricing Plans
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Free Plan
+- 5 exports per day
+- Access to all fonts
+- PNG export
 
-## What technologies are used for this project?
+### Pro Plan ($10/month)
+- Unlimited exports
+- PNG & PDF export
+- Priority support
+- Early access to new fonts
+- Custom font upload (coming soon)
 
-This project is built with:
+## 🔧 Environment Variables
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+For Stripe integration, you'll need:
 
-## How can I deploy this project?
+```env
+STRIPE_SECRET_KEY=sk_test_...
+STRIPE_PUBLISHABLE_KEY=pk_test_...
+```
 
-Simply open [Lovable](https://lovable.dev/projects/b762bad5-8743-45c4-9c91-589921676488) and click on Share -> Publish.
+## 🚀 Deployment
 
-## Can I connect a custom domain to my Lovable project?
+This project is optimized for Vercel deployment:
 
-Yes, you can!
+1. Connect your GitHub repo to Vercel
+2. Add environment variables in Vercel dashboard
+3. Deploy!
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 📱 Mobile Support
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+LazyWrite is fully responsive and works great on:
+- Desktop computers
+- Tablets
+- Mobile phones
+
+## 🛠️ Development
+
+### Project Structure
+```
+src/
+├── components/          # React components
+│   ├── TextInput.tsx   # Text input area
+│   ├── FontSelector.tsx# Font selection
+│   ├── PreviewArea.tsx # Canvas preview
+│   ├── ExportButton.tsx# Export functionality
+│   ├── PlanBanner.tsx  # Subscription status
+│   └── PaywallModal.tsx# Upgrade modal
+├── pages/
+│   └── Index.tsx       # Main app page
+└── index.css          # Custom styles
+```
+
+### Adding New Fonts
+
+1. Add font to Google Fonts in `index.html`
+2. Update `fontMap` in `FontSelector.tsx`
+3. Add font option to `handwritingFonts` array
+4. Update CSS classes in `index.css`
+
+## 🎯 Roadmap
+
+- [ ] PDF export with jsPDF
+- [ ] Custom font upload
+- [ ] Batch text processing
+- [ ] Templates and presets
+- [ ] API for developers
+- [ ] Mobile app
+
+## 📄 License
+
+MIT License - feel free to use for commercial projects!
+
+---
+
+Built with ❤️ for beautiful handwriting generation.

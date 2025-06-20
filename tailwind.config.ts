@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -84,11 +85,32 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'write': {
+					'0%': { 
+						'stroke-dasharray': '0 100',
+						opacity: '0'
+					},
+					'50%': {
+						opacity: '1'
+					},
+					'100%': { 
+						'stroke-dasharray': '100 0',
+						opacity: '1'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'write': 'write 2s ease-in-out infinite'
+			},
+			fontFamily: {
+				'handwriting': ['Kalam', 'cursive'],
+				'script': ['Dancing Script', 'cursive'],
+				'casual': ['Caveat', 'cursive'],
+				'indie': ['Indie Flower', 'cursive'],
+				'marker': ['Permanent Marker', 'cursive']
 			}
 		}
 	},
